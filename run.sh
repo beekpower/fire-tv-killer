@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Constants
-DEVICE_IP="192.168.5.70:5555"
+DEVICE_IP="192.168.4.28:5555"
 MIN_DELAY=1
 MAX_DELAY=1
 
