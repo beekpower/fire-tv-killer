@@ -2,12 +2,14 @@
 
 # Constants
 DEVICE_IP="192.168.4.28:5555"
-MIN_DELAY=5
-MAX_DELAY=15
+MIN_DELAY=1
+MAX_DELAY=1
 
 # Function to monitor foreground activity and return home if a specific activity is active
 monitor_activity() {
     while true; do
+        adb connect $DEVICE_IP
+
         # Get the current foreground activity
         current_activity=$(adb shell dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp')
 
@@ -35,6 +37,8 @@ manage_power() {
 
         # Sleep for the number of minutes computed above
         sleep ${delay}m
+
+        adb connect $DEVICE_IP
 
         # Check the wakefulness state of the device
         wakefulness=$(adb -s $DEVICE_IP shell dumpsys power | grep 'mWakefulness=' | cut -d '=' -f 2 | tr -d '\r')
