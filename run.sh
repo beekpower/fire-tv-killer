@@ -15,9 +15,9 @@ monitor_activity() {
         if [[ $current_activity == *"device.DeviceActivity"* ]]; then
             echo "device.DeviceActivity is currently active. Going home."
             adb -s $DEVICE_IP shell input keyevent 4
+        else
+            echo "device.DeviceActivity is not active."
         fi
-            # echo "device.DeviceActivity is not active."
-        # fi
 
         # Wait for 100 milliseconds before checking again
         sleep 0.5
