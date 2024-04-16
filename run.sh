@@ -3,7 +3,7 @@
 # Constants
 DEVICE_IP="192.168.5.70:5555"
 MIN_DELAY=1
-MAX_DELAY=1
+MAX_DELAY=8
 
 # This script sends a power key event to an Android device only if it is currently awake.
 # It runs at random intervals between MIN_DELAY and MAX_DELAY minutes.
