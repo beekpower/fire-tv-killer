@@ -1,5 +1,8 @@
 # FireTV Killer
 
+Key Events:
+https://gist.github.com/arjunv/2bbcca9a1a1c127749f8dcb6d36fb0bc
+
 ## Overview
 `run.sh` is a Bash script designed to automate the sending of key events to an Android device over a network. It specifically checks if the device is awake and sends a power key event (keyevent 26) if so. The script operates at random intervals which are configurable to suit user preferences.
 
