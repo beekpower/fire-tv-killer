@@ -3,7 +3,7 @@
 # Constants
 DEVICE_IP="192.168.4.28:5555"
 MIN_DELAY=2
-MAX_DELAY=13
+MAX_DELAY=12
 
 # Function to monitor foreground activity and return home if a specific activity is active
 monitor_activity() {
