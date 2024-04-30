@@ -45,6 +45,7 @@ manage_power() {
             # Device is awake, send the power key event to turn it off
             adb -s $DEVICE_IP shell input keyevent 26
             echo "Device was on. Sent power event."
+            date
         else
             echo "Device is off. No power event sent."
         fi
