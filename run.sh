@@ -5,6 +5,9 @@ DEVICE_IP="192.168.4.28:5555"
 MIN_DELAY=2
 MAX_DELAY=7
 
+echo "Started"
+date
+
 # Function to monitor foreground activity and return home if a specific activity is active
 monitor_activity() {
     while true; do
