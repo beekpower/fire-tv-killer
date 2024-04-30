@@ -8,7 +8,7 @@ MAX_DELAY=8
 # Function to monitor foreground activity and return home if a specific activity is active
 monitor_activity() {
     while true; do
-        adb connect $DEVICE_IP
+        adb connect $DEVICE_IP > /dev/null
 
         # Get the current foreground activity
         current_activity=$(adb shell dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp')
