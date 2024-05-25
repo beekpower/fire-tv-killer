@@ -3,7 +3,7 @@
 # Constants
 DEVICE_IP="192.168.4.28:5555"
 MIN_DELAY=1
-MAX_DELAY=5
+MAX_DELAY=10
 
 echo "Started"
 date
@@ -46,7 +46,8 @@ manage_power() {
 
         if [ "$wakefulness" = "Awake" ]; then
             # Device is awake, send the power key event to turn it off
-            adb -s $DEVICE_IP shell input keyevent 26
+            # adb -s $DEVICE_IP shell input keyevent 26
+            adb -s $DEVICE_IP shell reboot -p
             echo "Device was on. Sent power event."
             date
         else
