@@ -2,8 +2,8 @@
 
 # Constants
 DEVICE_IP="192.168.4.28:5555"
-MIN_DELAY=1
-MAX_DELAY=7
+MIN_DELAY=3
+MAX_DELAY=10
 
 echo "Started"
 date
